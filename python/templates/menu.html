@@ -2,11 +2,12 @@
 {% block body %}
 
 <footer id="dash">
-       <a href="{{url_for("profile")}}"><button id="new_button1" class="new_button1 new_but1">MY PROFILE</button></a>
+        <a href="{{url_for("profile")}}"><button id="new_button1" class="new_button1 new_but1">MY PROFILE</button></a>
         <a href="{{url_for("menu")}}"><button id="new_button2" class="new_button1 new_but1">MENU</button></a>
         <a href="{{url_for("fooditems")}}"><button id="new_button3" class="new_button1 new_but1">SELECT FOODITEMS</button></a>
         <a href="{{url_for("history")}}"><button id="new_button4" class="new_button1 new_but1">HISTORY</button></a>
         <a href="{{url_for("feedback")}}"><button id="new_button5" class="new_button1 new_but1">SUBMIT FEEDBACK</button></a>
+
 
         <form action="{{ url_for('logout') }}" method="get" style="display:inline;">
           <button id="new_button6" class="new_button1">LOG OUT</button>
@@ -14,6 +15,6 @@
     </footer>
   <div id="card">
   <div>MESS CREDIT MANAGEMENT SYSYEM<br>
-  Welcome, {{ user.name }}<br>
+  
 </div>
 {% endblock %}
