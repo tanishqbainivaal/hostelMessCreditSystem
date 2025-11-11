@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+
+{% block body %}
+ <header>
+        <img src="{{ url_for('static', filename='images/nsut.png') }}" alt="NSUT" id="logo">
+        <div id="a">NETAJI SUBHASH UNIVERSITY OF TECHNOLOGY<br>MESS CREDIT MANAGEMENT SYSTEM</div>
+    </header>
+    <div id="container"><p>The Mess Credit Management System is designed to automate and simplify daily 
+        food credit tracking for NSUT students. Each student is assigned fixed daily credits 
+        that get deducted automatically upon taking meals. Once the daily limit is reached, 
+        no further meals can be availed for that day. The system ensures transparency, 
+        accountability, and easy monitoring of mess usage.</p>
+        <div id="container_1">
+            <a href="{{ url_for('student_login') }}"><button>STUDENT LOGIN</button></a>
+            <a href="{{ url_for('student_signup') }}"><button>STUDENT SIGN UP</button></a>
+            <a href="{{ url_for('admin_login') }}"><button>ADMIN LOGIN</button></a>
+
+        </div>
+    </div>
+    <footer><p>© 2025 MESS CREDIT MANAGEMENT SYSTEM | Built by <span>Aditya Mudgal,Kunal Hudda,Tanishq Bainiwaal</span> | <a href="https://github.com/kunalhudda2006-cmd" target="_blank">GitHub</a></p></footer>
+
+{% endblock %}

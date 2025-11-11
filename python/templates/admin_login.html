@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="form-card">
+  <h2>Admin Login</h2>
+  <form method="post" action="{{ url_for('admin_login') }}">
+    <label>Username<br><input name="username" required></label>
+    <label>Password<br><input type="password" name="password" required></label>
+    <button type="submit">Login</button>
+  </form>
+</div>
+{% endblock %}

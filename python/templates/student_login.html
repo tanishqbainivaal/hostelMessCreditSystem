@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block body %}
+<div id="new_container">
+  <div class="tag">Student Login</div>
+  <!--  
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      <ul class="flashes">
+      {% for cat, msg in messages %}
+        <li class="{{ cat }}">{{ msg }}</li>
+      {% endfor %}
+      </ul>
+    {% endif %}
+  {% endwith %}
+  -->
+  <form method="post" action="{{ url_for('student_login') }}">
+    <label>Registration No<br><input type="text" name="regno" required></label>
+    <label>Password<br><input type="password" name="password" required></label>
+    <button type="submit" id="new_button">Login</button>
+  </form>
+  <div class="tag">Don't have an account? <a href="{{ url_for('student_signup') }}">Sign up</a></div>
+</div>
+{% endblock %}
