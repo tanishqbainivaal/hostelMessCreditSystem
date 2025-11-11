@@ -114,5 +114,40 @@ def profile():
     user = User.query.get(uid)
     return render_template('profile.html', user=user)
 
+@app.route('/menu')
+def menu():
+    uid = session.get('user_id')
+    if not uid:
+        return redirect(url_for('student_login'))
+    user = User.query.get(uid)
+    return render_template('menu.html', user=user)
+
+@app.route('/fooditems')
+def fooditems():
+    uid = session.get('user_id')
+    if not uid:
+        return redirect(url_for('student_login'))
+    user = User.query.get(uid)
+    return render_template('select_fooditems.html', user=user)
+
+
+@app.route('/history')
+def history():
+    uid = session.get('user_id')
+    if not uid:
+        return redirect(url_for('student_login'))
+    user = User.query.get(uid)
+    return render_template('history.html', user=user)
+
+@app.route('/feedback')
+def feedback():
+    uid = session.get('user_id')
+    if not uid:
+        return redirect(url_for('student_login'))
+    user = User.query.get(uid)
+    return render_template('feedback.html', user=user)
+
+
+
 if __name__ == '__main__':
     app.run(debug=True, port=5000)
