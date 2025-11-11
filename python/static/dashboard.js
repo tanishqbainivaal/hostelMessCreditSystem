@@ -10,6 +10,10 @@
     alert("Logout cancelled.");
   }
 }*/
+let but=document.querySelector("#new_button_feed");
+but.addEventListener("click",()=>{
+  document.querySelector("#feed").value="";
+});
 
 
 
