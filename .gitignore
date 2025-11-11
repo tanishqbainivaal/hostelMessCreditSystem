@@ -153,6 +153,8 @@ venv.bak/
 
 # mkdocs documentation
 /site
+# macOS trash file
+.DS_Store
 
 # mypy
 .mypy_cache/
