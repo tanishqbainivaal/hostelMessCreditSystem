@@ -14,6 +14,13 @@
     </footer>
   <div id="card">
   <div>MESS CREDIT MANAGEMENT SYSYEM<br>
-  Welcome, {{ user.name }}<br>
+  <div id="border">
+    <div class="tag1">MY PROFILE</div>
+  Name: {{ user.name }}<br>
+  Roll number: {{user.roll_no}}<br>
+  Total credits:23000<br>
+  Balance credits:{{user.balance}}<br>
+  Created_at:{{user.created_at}}
+  </div>
 </div>
 {% endblock %}

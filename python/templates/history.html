@@ -14,7 +14,36 @@
         </form>
     </footer>
   <div id="card">
-  <div>MESS CREDIT MANAGEMENT SYSYEM<br>
+  MESS CREDIT MANAGEMENT SYSYEM<br>
+    <h2 style="text-align:center;">MESS TRANSACTION HISTORY</h2>
+
+
+
+  {% if transactions %}
+    <div id="menu-grid1">
+      <div class="grid-header1">
+          <div>Transaction ID</div>
+          <div>Item</div>
+          <div>Quantity</div>
+          <div>Total Cost (Credits)</div>
+          <div>Date & Time</div>
+      </div>
+      <div id="menu-items1">
+        {% for txn in transactions %}
+        <div class="menu-row1">
+          <div>{{ txn.txn_id }}</div>
+          <div>{{ txn.item_name }}</div>
+          <div>{{ txn.quantity }}</div>
+          <div>{{ txn.total_cost }}</div>
+          <div>{{ txn.txn_time }}</div>
+        </div>
+        {% endfor %}
+      
+      </div>
+    </div>
+  {% else %}
+    <p style="text-align:center;">No transactions found yet!</p>
+  {% endif %}
   
 </div>
 {% endblock %}
